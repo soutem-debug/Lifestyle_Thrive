@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$Title$</title>
+</head>
+<body>
+
+<form action="" method="post" novalidate>
+      <h3 align="center">New story form</h3>
+      {{form.csrf_token}}
+      <p>
+          <label for="title">Page Title</label>
+          {{form.title(class="form-control", placeholder="Set a title", type="email", id="title")}}
+      <span style="color:red;">
+      </span>
+      </p>
+       <p>
+                 <label for="page-content">Page Content</label>
+
+          {{form.content(class="form-control", placeholder="Page content here", id="post-content")}}
+      <span style="color:red;">
+      </span>
+      </p>
+      <p>
+        <input type="submit" class="btn btn-primary">
+      </p>
+</form>
+
+</body>
+</html>
