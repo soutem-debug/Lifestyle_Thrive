@@ -25,10 +25,10 @@ def raj():
 
 @app.route('/fashion')
 def saf():
-    return  render_template('fashion.html')
+    return render_template('fashion.html')
 
 
-@app.route('/food')
+@app.route('/food.html')
 def sonia():
     return render_template('food.html')
 
@@ -40,7 +40,7 @@ def subscribe():
 
 @app.route('/contact')
 def contact():
-    return  render_template('contact.html')
+    return render_template('contact.html')
 
 
 @app.route('/sign-in')
