@@ -263,6 +263,17 @@ section .container .owl-nav{
 }
 
 
+.blog {
+  width: 100%;
+  height: 100px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 /* -------x------- Blog Carousel -----x------ */
 
 /* ---------------- Site Content ----------------*/
@@ -353,44 +364,6 @@ background:#808080.;
 position; absolute;
 }
 
-.site-content > .sidebar .category-list{
-    font-family: var(--Poppins);
-}
-
-.site-content > .sidebar .category-list .list-items{
-    background: var(--sky);
-    padding: .4rem 1rem;
-    margin: .8rem 0;
-    border-radius: 3rem;
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    position; absolute;
-}
-
-.site-content > .sidebar .category-list .list-items a{
-    color:  black;
-}
-
-.site-content .sidebar .popular-post .post-content{
-    padding: 1rem 0;
-}
-
-.site-content .sidebar .popular-post h2{
-    padding-top: 8rem;
-}
-
-.site-content .sidebar .popular-post .post-info{
-    padding: .4rem .1rem !important;
-    bottom: 0rem !important;
-    left: 1.5rem !important;
-    border-radius: 0rem !important;
-    background: white !important;
-}
-
-.site-content .sidebar .popular-post .post-title a{
-    font-size: 1rem;
-}
 
 .site-content .sidebar .newsletter{
     padding-top: 10rem;
@@ -513,6 +486,7 @@ footer.footer .move-up span:hover{
 }
 
 /* ---------x------- Footer ----------x---------- */
+
 
 /*              Viewport less then or equal to 1130px            */
 

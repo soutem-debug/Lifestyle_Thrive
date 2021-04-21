@@ -14,23 +14,28 @@ def about():
 
 
 @app.route('/hobbies')
-def em():
+def hobbies():
     return render_template('hobbies.html')
 
 
-@app.route('/raj')
-def raj():
-    return render_template('raj.html')
+@app.route('/wellness')
+def wellness():
+    return render_template('wellness.html')
 
 
 @app.route('/fashion')
-def saf():
+def fashion():
     return render_template('fashion.html')
 
 
 @app.route('/food.html')
-def sonia():
+def food():
     return render_template('food.html')
+
+
+@app.route('/trending')
+def trending():
+    return render_template('trending.html')
 
 
 @app.route('/subscribe')

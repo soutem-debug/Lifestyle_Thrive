@@ -8,11 +8,11 @@
     <title>Thrive</title>
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='./css/font_awe.css' )}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/font_awe.css')}}">
 
 
     <!-- --------- Owl-Carousel ------------------->
-    <link rel="stylesheet" href="{{ url_for('static', filename='./css/owl.carousel.min.css' )}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='./css/owl.theme.default.min.css')}}">
 
     <!-- ------------ AOS Library ------------------------- -->
@@ -30,7 +30,7 @@
     <nav class="nav">
         <div class="nav-menu flex-row">
             <div class="nav-brand">
-                <a href="index.html">Thrive</a>
+                <a href="/">The Fantastic Four</a>
             </div>
             <div class="toggle-collapse">
                 <div class="toggle-icons">
@@ -40,19 +40,19 @@
             <div>
                 <ul class="nav-items">
                     <li class="nav-link">
-                        <a href="index.html">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li class="nav-link">
-                        <a href="about.html">About Us</a>
+                        <a href="/about">About Us</a>
                     </li>
                     <li class="nav-link">
-                        <a href="trending.html">Trending</a>
+                        <a href="/trending">Trending</a>
                     </li>
                     <li class="nav-link">
                         <a href="#">Archive</a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">Pages</a>
+                        <a href="/subscribe">Subscribe</a>
                     </li>
                     <li class="nav-link">
                         <a href="#">Contact Us</a>
@@ -94,7 +94,7 @@
                 <div class="container">
                     <div class="owl-carousel owl-theme blog-post">
                         <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                            <img src="{{ url_for('static', filename='./assets/Blog-post/post-1.jpg')}}" alt="post-1">
+                            <img src="{{ url_for('static', filename='./assets/images_old/images/em/wild_swimming.jpg')}}" alt="post-1">
                             <div class="blog-title">
                                 <h3>Best resterants now open</h3>
                                 <a href="food.html">
@@ -104,10 +104,10 @@
                             </div>
                         </div>
                         <div class="blog-content" data-aos="fade-in" data-aos-delay="200">
-                            <img src="{{ url_for('static', filename='./assets/Blog-post/post-3.jpg')}}" alt="post-2">
+                            <img src="{{ url_for('static', filename='./assets/images_old/images/em/photo.jpg')}}" alt="wildSwimming">
                             <div class="blog-title">
                                 <h3>Wild Swimming in Yorkshire</h3>
-                                <a href="hobbies.html">
+                                <a href="/hobbies">
                                 <button class="btn btn-blog">Hobbies</button>
                                 <span>3 minute read</span>
                                 </a>
@@ -117,7 +117,7 @@
                             <img src="{{ url_for('static', filename='./assets/Blog-post/post-2.jpg')}}" alt="post-3">
                             <div class="blog-title">
                                 <h3>Motherhood in lockdown</h3>
-                                <a href="wellness.html">
+                                <a href="/wellness">
                                 <button class="btn btn-blog">Wellness</button>
                                 <span>2 minutes</span>
                                     </a>
@@ -127,7 +127,7 @@
                             <img src="{{ url_for('static', filename='./assets/Blog-post/post-5.png')}}" alt="post-5">
                             <div class="blog-title">
                                 <h3>London Fashion week</h3>
-                                <a href="fashion.html">
+                                <a href="/fashion">
                                 <button class="btn btn-blog">Fashion</button>
                                 <span>2 minutes</span>
                                 </a>
@@ -153,7 +153,7 @@
                     <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
                         <div class="post-image">
                             <div>
-                                <img src="{{ url_for('static', filename='./assets/Blog-post/blog1.png')}}" class="img" alt="blog1">
+                                <img src="{{ url_for('static', filename='./assets/images/em/gym.jpg')}}" class="img" alt="blog1">
                             </div>
                             <div class="post-info flex-row">
                                 <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Raj</span>

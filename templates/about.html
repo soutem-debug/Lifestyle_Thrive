@@ -8,32 +8,121 @@
     <title>Thrive</title>
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="./css/font_awe.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../css/font_awe.css' )}}">
 
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='../css/aos.css')}}">
 
     <!-- Custom Style   -->
-    <link rel="stylesheet" href="./css/Style.css">
-    <link rel="stylesheet" href="./css/about_stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/about_stylesheet.css')}}">
+
 
 </head>
 
-<body>
+<header>
 
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
 
-<!--------------------------------------Main page-------------------------------------------------->
-<section class="about-page">
-        <div class="inner-container">
-            <h1>About Us</h1>
-            <p class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit ducimus, enim inventore earum, eligendi nostrum pariatur necessitatibus eius dicta a voluptates sit deleniti autem error eos totam nisi neque voluptates sit deleniti autem error eos totam nisi neque.
-            </p>
-            <div class="skills">
-                <span>Web Design</span>
-                <span>Photoshop & Illustrator</span>
-                <span>Coding</span>
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="/">Fantastic Four</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/about">About Us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="trending.html">Trending</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Archive</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Pages</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+</header>
+    <!----------------------------- Main Site Section ------------------------------>
+<body>
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p>The Fantastic Four</p>
+  <p>Resize the browser window to see that this page is responsive by the way.</p>
+</div>
+
+<h2>Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="#" alt="Emma" style="width:100%">
+      <div class="container">
+        <h2>Jane Doe</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>jane@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
     </div>
-    </section>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="#" alt="Saf" style="width:100%">
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="#" alt="Raj" style="width:100%">
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="column">
+    <div class="card">
+      <img src="#" alt="Sonia" style="width:100%">
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+    </div>
 </body>
-</html>
+
+    </html>
