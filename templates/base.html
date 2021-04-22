@@ -24,13 +24,13 @@
                 <a href="/">Home</a>
             </li>
             <li>
-                <a href="/projects">Blog</a>
-            </li>
-            <li>
-                <a href="/projects">Projects</a>
-            </li>
-            <li>
                 <a href="/about">About</a>
+            </li>
+            <li>
+                <a href="/projects">Blogs</a>
+            </li>
+            <li>
+                <a href="/login">Login</a>
             </li>
             <li>
                 <input type="text" placeholder="Search Here">
@@ -50,13 +50,13 @@
                 <a class="active" href="/">Home</a>
             </li>
             <li>
-                <a href="/blogs">Blogs</a>
-            </li>
-            <li>
-                <a href="/projects">Projects</a>
-            </li>
-            <li>
                 <a href="/about">About</a>
+            </li>
+            <li>
+                <a href="/projects">Blogs</a>
+            </li>
+            <li>
+                <a href="/login">Login</a>
             </li>
             <li>
                 <div id="search-icon">
@@ -74,24 +74,24 @@
 
 
 <!------------------------------------------- Banner --------------------------------------->
-     <div style="background-image: url(static/assets/background_top.jpg">
+     {% block banner %}
+    <div style="background-image: url(static/assets/background_top.jpg">
     <div id="banner">
-        <h4>Health & Wellness</h4>
-        <p>Lifestyle</p>
+        <h4>{% block banner_title %}{% endblock %}</h4>
+<!--        <p>Lifestyle</p>-->
     </div>
      </div>
-
+        {% endblock %}
 <!------------------------x------------- Banner -----------------------x---------------------    -->
+    <main>
 <!--------------------------------------- Page ------------------------------------------>
-        {% block header %}<a href="/projects">
-
+        {% block header %}
                 {% block title %}{% endblock %}
-        </a>
             {% endblock %}
 
         {% block content %}{% endblock %}
 <!-------------------------x---------------- Page --------------------------------------->
-
+    </main>
         <!--------------------------------------- Git hub link ------------------------------------------>
 
         <h2 class="section-heading">Our Git hub Project</h2>

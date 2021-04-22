@@ -13,6 +13,12 @@ h1 {
   font-family: "Poppins", serif;
 }
 
+h4 {
+  font-size: 64px;
+  font-family: "Poppins", serif;
+  font-color: red;
+}
+
 p {
   line-height: 1.5;
 }

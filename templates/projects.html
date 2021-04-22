@@ -1,78 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block banner_title %}Blogs{% endblock %}
+{% block header %}<h2 class="page-heading">{% block title %}Blogs{% endblock %}</h2>
+{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel=href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-        crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='./css/index.css')}}">
-    <title>Fantastic Four</title>
-</head>
-
-<body>
-  <div id="slideout-menu">
-      <ul>
-          <li>
-              <a href="/">Home</a>
-          </li>
-          <li>
-              <a href="/blogs">Blog</a>
-          </li>
-          <li>
-              <a href="/projects">Projects</a>
-          </li>
-          <li>
-              <a href="/about">About</a>
-          </li>
-          <li>
-              <a href="/subscribe">Subscribe</a>
-          </li>
-          <li>
-              <input type="text" placeholder="Search Here">
-          </li>
-      </ul>
-  </div>
-
-  <nav>
-      <div id="logo-title">
-            <a href="/">The Fantastic Four</a>
-        </div>
-      <div id="menu-icon">
-          <i class="fas fa-bars"></i>
-      </div>
-      <ul>
-          <li>
-              <a href="/">Home</a>
-          </li>
-          <li>
-              <a class="active" href="/projects">Blog</a>
-          </li>
-          <li>
-              <a href="/blogs">Projects</a>
-          </li>
-          <li>
-              <a href="/about">About</a>
-          </li>
-          <li>
-              <div id="search-icon">
-                  <i class="fas fa-search"></i>
-              </div>
-          </li>
-      </ul>
-  </nav>
-
-  <div id="searchbox">
-      <input type="text" placeholder="Search Here">
-  </div>
-
-  <main>
-    <h2 class="page-heading">Blogs</h2>
+{% block content %}
 
     <section>
       <div class="card">
@@ -223,61 +154,4 @@
       <a href="#">Next</a>
     </div>
 
-    <footer>
-        <div id="left-footer">
-            <h3>Quick Links</h3>
-            <p>
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/about">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="/project">Blogs</a>
-                    </li>
-                    <li>
-                        <a href="/project">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </p>
-        </div>
-
-        <div id="right-footer">
-            <h3>Follow us on</h3>
-            <div id="social-media-footer">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <p>&COPY The Fantastic Four</p>
-        </div>
-    </footer>
-
-  </main>
-
-  <script src="{{ url_for('static', filename='js/main.js')}}"></script>
-</body>
-
-</html>
+{% endblock %}

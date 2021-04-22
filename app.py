@@ -35,9 +35,9 @@ def contact():
     return render_template('contact.html')
 
 
-@app.route('/sign-in')
+@app.route('/login')
 def sign():
-    return render_template('sign-in.html')
+    return render_template('login2.html')
 
 
 if __name__ == "__main__":

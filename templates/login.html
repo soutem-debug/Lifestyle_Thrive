@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block header %}<h2 class="page-heading">{% block title %}Login!{% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
 
 <form action="" method="post" novalidate>
       <h3 align="center">Login</h3>
-      {{form.csrf_token}}
+<!--      {{form.csrf_token}}-->
       <p>
           <label for="email">Email Address</label>
           {{form.email(class="form-control", placeholder="Enter email", type="email", id="email")}}
@@ -33,5 +32,4 @@
       </p>
 </form>
 
-</body>
-</html>
+{% endblock %}
