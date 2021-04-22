@@ -8,7 +8,7 @@ import datetime
 
 today = datetime.datetime.today()
 
-engine = create_engine("mysql://admin2:@GitPa$$w0rd#@54.74.234.11/thefantasticfour?charset=utf8mb4")
+engine = create_engine("mysql+mysqlconnector://admin2:@GitPa$$w0rd#@54.74.234.11/thefantasticfour?charset=utf8mb4")
 DBSession = orm.sessionmaker(bind=engine)
 session = DBSession()
 
@@ -68,7 +68,7 @@ def login():
                 else:
                     flash("Invalid Credentials, Please Try Again")
                     return render_template("login.html", form=form)
-    return render_template('login.html', form=form)
+    return render_template('login2.html', form=form)
 
 
 @app.route('/blog_post', methods=['GET', 'POST'])

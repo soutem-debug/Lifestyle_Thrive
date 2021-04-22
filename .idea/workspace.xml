@@ -5,9 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dbsetup.py" beforeDir="false" afterPath="$PROJECT_DIR$/dbsetup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/subscribe.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/subscribe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog_post2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog_post2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +53,7 @@
       <recent name="C:\Users\esout\PycharmProjects\updated_html\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.dbsetup">
+  <component name="RunManager" selected="Python.app">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="updated_html" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,8 +98,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.dbsetup" />
         <item itemvalue="Python.app" />
+        <item itemvalue="Python.dbsetup" />
       </list>
     </recent_temporary>
   </component>
