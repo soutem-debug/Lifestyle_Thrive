@@ -5,124 +5,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Thrive</title>
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='../css/font_awe.css' )}}">
-
-
-    <!-- ------------ AOS Library ------------------------- -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='../css/aos.css')}}">
-
-    <!-- Custom Style   -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/about_stylesheet.css')}}">
-
-
+    <link rel=href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/index.css')}}">
+    <title>Fantastic Four</title>
 </head>
 
-<header>
+<body>
+  <div id="slideout-menu">
+      <ul>
+          <li>
+              <a href="/">Home</a>
+          </li>
+          <li>
+              <a href="/blog">Blog</a>
+          </li>
+          <li>
+              <a href="/projects">Projects</a>
+          </li>
+          <li>
+              <a href="/about">About</a>
+          </li>
+          <li>
+              <input type="text" placeholder="Search Here">
+          </li>
+      </ul>
+  </div>
 
-    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+  <nav>
+      <div id="logo-title">
+            <a href="/">The Fantastic Four</a>
+        </div>
+      <div id="menu-icon">
+          <i class="fas fa-bars"></i>
+      </div>
+      <ul>
+          <li>
+              <a href="/">Home</a>
+          </li>
+          <li>
+              <a href="/blogs">Blog</a>
+          </li>
+          <li>
+              <a href="/projects">Projects</a>
+          </li>
+          <li>
+              <a class="active" href="/about">About</a>
+          </li>
+          <li>
+              <div id="search-icon">
+                  <i class="fas fa-search"></i>
+              </div>
+          </li>
+      </ul>
+  </nav>
 
-    <nav class="nav">
-        <div class="nav-menu flex-row">
-            <div class="nav-brand">
-                <a href="/">Fantastic Four</a>
-            </div>
-            <div class="toggle-collapse">
-                <div class="toggle-icons">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-            <div>
-                <ul class="nav-items">
-                    <li class="nav-link">
+  <div id="searchbox">
+      <input type="text" placeholder="Search Here">
+  </div>
+
+  <main>
+
+    <h2 class="page-heading">About us!</h2>
+    <div id="post-container">
+      <section id="blogpost">
+        <div class="card">
+          <div class="card-image">
+            <img src="img/1.jpg" alt="Card Image">
+          </div>
+          <div class="card-description">
+            <h3>Who we are</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique omnis fugiat sapiente corrupti iure vitae
+              tempora magnam laboriosam eligendi voluptatem? Quisquam similique officia eum? Ullam ex iste in officia eveniet
+              blanditiis quae iure ducimus explicabo dicta molestias, reiciendis quidem unde.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique omnis fugiat sapiente corrupti iure vitae
+              tempora magnam laboriosam eligendi voluptatem? Quisquam similique officia eum? Ullam ex iste in officia eveniet
+              blanditiis quae iure ducimus explicabo dicta molestias, reiciendis quidem unde.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique omnis fugiat sapiente corrupti iure vitae
+              tempora magnam laboriosam eligendi voluptatem? Quisquam similique officia eum? Ullam ex iste in officia eveniet
+              blanditiis quae iure ducimus explicabo dicta molestias, reiciendis quidem unde.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <aside id="sidebar">
+        <h3>Sidebar Heading</h3>
+        <p>Sidebar 1</p>
+      </aside>
+    </div>
+
+    <footer>
+        <div id="left-footer">
+            <h3>Quick Links</h3>
+            <p>
+                <ul>
+                    <li>
                         <a href="/">Home</a>
                     </li>
-                    <li class="nav-link">
-                        <a href="/about">About Us</a>
+                    <li>
+                        <a href="/about">About</a>
                     </li>
-                    <li class="nav-link">
-                        <a href="trending.html">Trending</a>
+                    <li>
+                        <a href="#">Privacy Policy</a>
                     </li>
-                    <li class="nav-link">
-                        <a href="#">Archive</a>
+                    <li>
+                        <a href="/blogl">Blogs</a>
                     </li>
-                    <li class="nav-link">
-                        <a href="#">Pages</a>
+                    <li>
+                        <a href="/projects">Projects</a>
                     </li>
-                    <li class="nav-link">
-                        <a href="#">Contact Us</a>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </p>
+        </div>
+
+        <div id="right-footer">
+            <h3>Follow us on</h3>
+            <div id="social-media-footer">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-github"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
+            <p>&COPY Fantastic Four</p>
         </div>
-    </nav>
+    </footer>
 
-    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
-</header>
-    <!----------------------------- Main Site Section ------------------------------>
-<body>
-<div class="about-section">
-  <h1>About Us Page</h1>
-  <p>The Fantastic Four</p>
-  <p>Resize the browser window to see that this page is responsive by the way.</p>
-</div>
+  </main>
 
-<h2>Our Team</h2>
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="#" alt="Emma" style="width:100%">
-      <div class="container">
-        <h2>Jane Doe</h2>
-        <p class="title">CEO & Founder</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>jane@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <img src="#" alt="Saf" style="width:100%">
-      <div class="container">
-        <h2>Mike Ross</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <img src="#" alt="Raj" style="width:100%">
-      <div class="container">
-        <h2>John Doe</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>john@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-    <div class="column">
-    <div class="card">
-      <img src="#" alt="Sonia" style="width:100%">
-      <div class="container">
-        <h2>John Doe</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>john@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-    </div>
+  <script src="main.js"></script>
 </body>
 
-    </html>
+</html>

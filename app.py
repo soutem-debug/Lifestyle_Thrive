@@ -3,6 +3,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
+@app.route('/home')
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -13,29 +14,15 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/hobbies')
-def hobbies():
-    return render_template('hobbies.html')
+@app.route('/blogs')
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
 
 
-@app.route('/wellness')
-def wellness():
-    return render_template('wellness.html')
-
-
-@app.route('/fashion')
-def fashion():
-    return render_template('fashion.html')
-
-
-@app.route('/food.html')
-def food():
-    return render_template('food.html')
-
-
-@app.route('/trending')
-def trending():
-    return render_template('trending.html')
+@app.route('/post')
+def post():
+    return render_template('blog_post2.html')
 
 
 @app.route('/subscribe')
