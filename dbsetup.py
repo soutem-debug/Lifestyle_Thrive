@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, VARCHAR, create_engine, DATETIME, Boolean, ForeignKey
+from sqlalchemy import Column, Integer, VARCHAR, create_engine, DATETIME, Boolean, ForeignKey, Text
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
@@ -33,6 +33,7 @@ class Comment(Base):
     id = Column(Integer, primary_key=True)
     name = Column(VARCHAR(50), unique=False, nullable=False)
     email = Column(VARCHAR(120), unique=False, nullable=False)
+    message = Column(Text, nullable=False)
     post_id = Column(Integer, ForeignKey('post.id'), nullable=False)
     post = Column(VARCHAR(100), nullable=False)
     pub_date = Column(DATETIME, nullable=False, default=DATETIME.utcnow)

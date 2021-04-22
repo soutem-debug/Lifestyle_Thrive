@@ -1,6 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash, redirect
+from sqlalchemy.orm import Session
+from dbsetup import Comment
+from dbsetup import engine
+with Session(engine) as session:
 
-app = Flask(__name__)
+
+    app = Flask(__name__)
 
 
 @app.route('/home')
@@ -20,9 +25,22 @@ def projects():
     return render_template('projects.html')
 
 
-@app.route('/post')
-def post():
+@app.route('/article')
+def article():
     return render_template('blog_post2.html')
+
+
+@app.route('/post/<int:post_id>', methods=['GET', 'POST'])
+def post(post_id):
+    if request.method == 'POST':
+        name = request.form.get('name')
+        email = request.form.get('email')
+        message = request.form.get('message')
+        comment = Comment(name=name, email=email, message=message, post_id=post_id)
+        session.add(comment)
+        flash('Comment submitted')
+        session.commit()
+        return redirect(request.url)
 
 
 @app.route('/subscribe')
