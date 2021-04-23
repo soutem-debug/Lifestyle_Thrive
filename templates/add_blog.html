@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block banner_title %}Add a new blog{% endblock %}
+{% block header %}<h2 class="section-heading">{% block title %}Add Blog{% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
 
 <form action="" method="post" novalidate>
-      <h3 align="center">New story form</h3>
       {{form.csrf_token}}
       <p>
           <label for="title">Page Title</label>
@@ -23,9 +21,7 @@
       </span>
       </p>
       <p>
-        <input type="submit" class="btn btn-primary">
+          <button type="submit" class="btn-readmore">Submit</button>
       </p>
 </form>
-
-</body>
-</html>
+{% endblock %}
