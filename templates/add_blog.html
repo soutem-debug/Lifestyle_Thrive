@@ -1,27 +1,22 @@
 {% extends "base.html" %}
 {% block banner_title %}Add a new blog{% endblock %}
-{% block header %}<h2 class="section-heading">{% block title %}Add Blog{% endblock %}</h2>
+{% block header %}<h2 class="section-heading">{% block title %}New Blog{% endblock %}</h2>
 {% endblock %}
 
 {% block content %}
 
-<form action="" method="post" novalidate>
-      {{form.csrf_token}}
-      <p>
-          <label for="title">Page Title</label>
-          {{form.title(class="form-control", placeholder="Set a title", type="email", id="title")}}
-      <span style="color:red;">
-      </span>
-      </p>
-       <p>
-                 <label for="page-content">Page Content</label>
+<form action="#" method="post" novalidate>
+   <div class="form-group">
+       <label for="title">Blog Title:</label>
+       <input type="text" maxlength="1000" name="title" placeholder="Blog Title">
+   </div>
+    <div class="form-group">
+       <label for="page-content">Page Content:</label>
+       <input maxlength="100" name="page-content" placeholder="Blog content">
 
-          {{form.content(class="form-control", placeholder="Page content here", id="post-content")}}
-      <span style="color:red;">
-      </span>
-      </p>
-      <p>
-          <button type="submit" class="btn-readmore">Submit</button>
-      </p>
+       <button type="submit" class="btn-readmore">Create</button>
+   </div>
 </form>
+
+<form action="#" method="post">
 {% endblock %}

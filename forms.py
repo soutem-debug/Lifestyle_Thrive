@@ -16,3 +16,5 @@ class RegistrationForm(FlaskForm):
 class BlogPost(FlaskForm):
     title = StringField('title', validators=[InputRequired()])
     content = TextAreaField('password', validators=[InputRequired()],)
+
+
