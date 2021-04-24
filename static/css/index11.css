@@ -1,7 +1,7 @@
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
-  background-color: #3A5199;
+  background-color: rgba(255,245,238);
 }
 
 h1 {
@@ -72,13 +72,13 @@ textarea:focus {
 #banner h1 {
   border-radius: 0px;
   padding: 0px;
-  font-size: 50px;
+  font-size: 100px;
 
 }
 #banner h4 {
   border-radius: 8px;
   padding: 0 24px;
-  font-size: 24px;
+  font-size: 50px;
 }
 
 /* Search Box */
@@ -102,7 +102,7 @@ textarea:focus {
 
 nav {
   height: 72px;
-  background: #808080;
+  background: rgba(211,211,211);
   width: 100%;
   margin: 0;
   position: fixed;
@@ -116,8 +116,8 @@ nav {
 }
 
 nav a {
-  padding: 0 32px;
-  color: #eee;
+  padding: 0 52px;
+  color: rgba(255,105,180);
   transition: 0.4s;
 }
 
@@ -303,14 +303,14 @@ section {
 /* Footer */
 
 footer {
-  background: black;
+  background: rgba(211,211,211);
   padding: 8px;
   color: #eee;
   display: flex;
 }
 
 footer a {
-  color: white;
+  color: rgba(255,105,180);
 }
 
 footer #left-footer {
@@ -507,11 +507,11 @@ footer #social-media-footer ul li:hover a .fa-github {
 
   footer #right-footer {
     background: #eee;
-    color: #D5D6D2;
+    color: pink;
   }
 
   footer #right-footer a {
-    color: #D5D6D2;
+    color: pink;
   }
 
   footer #social-media-footer a .fa-facebook,
