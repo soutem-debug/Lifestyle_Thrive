@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block banner_title %}THRIVE{% endblock %}
-{% block header %}<h2 class="section-heading">{% block title %}All Blogs{% endblock %}</h2>
+{% block header %}<h2 class="section-heading">{% block title %}Popular Blogs{% endblock %}</h2>
 {% endblock %}
 
 {% block content %}
@@ -16,7 +16,7 @@
        <section>
             <div class="card">
                 <div class="card-image">
-                    <a href="/projects">
+                    <a href="/post">
                         <img src="static/assets/dales.jpg" alt="wildSwimming">
                     </a>
                 </div>
@@ -27,34 +27,36 @@
                     </a>
                     <p>Are you one of the people that has discovered the amazing health and mental
                         well-being wild swimming offers? If not push the link below to find out
-                        the best spots in Yorkshire.</p>
+                        the best spots in Yorkshire to swim.</p>
                     <a href="/post" class="btn-readmore">Read more</a>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-image">
-                    <a href="#">
-                        <img src="img/2.jpg" alt="Card Image">
+                    <a href="/walk">
+                        <img src="static/assets/walking.jpg" alt="WalkingHiking">
                     </a>
                 </div>
 
                 <div class="card-description">
-                    <a href="/post">
-                        <h3>The Blog Title Here</h3>
+                    <a href="/walk">
+                        <h3>Walking & Hiking</h3>
                     </a>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, ullam facilis consequuntur eligendi sit accusamus tempora
-                        cum distinctio pariatur ipsa quod, odit dolorum non vero recusandae? Corporis voluptatem optio nulla.
+                        As the world ground to a halt during the COVID-19 pandemic, more and more people
+                        took to the streets, the countryside and local parks to incorporate physical
+                        activity into their daily lives. No restrictions are starting to lift read more to find out
+                        some of the best spots in Yorkshire.
                     </p>
-                    <a href="blogpost.html" class="btn-readmore">Read more</a>
+                    <a href="/walk" class="btn-readmore">Read more</a>
                 </div>
             </div>
         </section>
 
         <!--------------------------------------- All Projects link ------------------------------------------>
-        <a href="blogslist.html">
-        	<h2 class="section-heading">All Projects</h2>
+        <a href="#">
+        	<h2 class="section-heading">All Blogs</h2>
     	</a>
 
 
@@ -63,37 +65,82 @@
         <section>
             <div class="card">
                 <div class="card-image">
-                    <a href="blogpost.html">
-                        <img src="img/3.jpg" alt="Card Image">
+                    <a href="/paddle">
+                        <img src="static/assets/paddle.jpg" alt="paddleBoarding">
                     </a>
                 </div>
 
                 <div class="card-description">
-                    <a href="blogpost.html">
-                        <h3>The Project Title Here</h3>
+                    <a href="/paddle">
+                        <h3>Paddle boarding</h3>
                     </a>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, ullam facilis consequuntur eligendi sit accusamus tempora
-                        cum distinctio pariatur ipsa quod, odit dolorum non vero recusandae? Corporis voluptatem optio nulla.
+                        Yes it is true the SUP (Stand Up Paddle) has been around for many years, but its rise
+                        in popularity during the pandemic is no suprise with boardings taking to
+                        rivers and canals up and down the country.
                     </p>
-                    <a href="blogpost.html" class="btn-readmore">Read more</a>
+                    <a href="/paddle" class="btn-readmore">Read more</a>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-image">
-                    <a href="blogpost.html">
-                        <img src="img/4.jpg" alt="Card Image">
+                    <a href="/garden">
+                        <img src="static/assets/gardening.jpg" alt="Gardening">
+                    </a>
+                </div>
+
+                <div class="card-description">
+                    <a href="/garden">
+                        <h3>Gardening</h3>
+                    </a>
+                    <p>
+                        After being confined to out homes all winter, Spring this year has been an even
+                        more welcome break from the cold, dark nights. It is the perfect time to start
+                        planting and getting back to nature.
+                    </p>
+                    <a href="/garden" class="btn-readmore">Read more</a>
+                </div>
+            </div>
+        </section>
+
+<section>
+            <div class="card">
+                <div class="card-image">
+                    <a href="/mother">
+                        <img src="static/assets/baby.jpg" alt="Motherhood">
+                    </a>
+                </div>
+
+                <div class="card-description">
+                    <a href="/mother">
+                        <h3>A new mum in a new world</h3>
+                    </a>
+                    <p>
+                        They say it takes a village, and mums went without their village in one of their most
+                        testing times in their life.  Everybody forgets that when a baby is born, a mother is
+                        born too, and she too needs that same love, nourishment and rich environment in order
+                        to thrive.
+                    </p>
+                    <a href="/mother" class="btn-readmore">Read more</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <a href="#">
+                        <img src="static/assets/gardening.jpg" alt="Gardening">
                     </a>
                 </div>
 
                 <div class="card-description">
                     <a href="blogpost.html">
-                        <h3>The Project Title Here</h3>
+                        <h3>Gardening</h3>
                     </a>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, ullam facilis consequuntur eligendi sit accusamus tempora
-                        cum distinctio pariatur ipsa quod, odit dolorum non vero recusandae? Corporis voluptatem optio nulla.
+                        After being confined to out homes all winter, Spring this year has been an even
+                        more welcome break from the cold, dark nights. It is the perfect time to start
+                        planting and getting back to nature.
                     </p>
                     <a href="blogpost.html" class="btn-readmore">Read more</a>
                 </div>
@@ -101,5 +148,19 @@
         </section>
 
 <!-----------------------xx--------------- All Projects link ---------------------xx--------------------->
+<section>
+    <<nav aria-label="pagination">
+  <ul class="pagination pagination-sm">
+    <li class="page-item active" aria-current="page">
+      <span class="page-link">1</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+  </ul>
+</nav>
+
+</section>
+
+
 
 {% endblock %}

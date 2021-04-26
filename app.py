@@ -47,8 +47,27 @@ def projects():
 
 @app.route('/post', methods=['GET'])
 def post():
-    return render_template('blog_post2.html')
+    return render_template('swim.html')
 
+
+@app.route('/walk', methods=['GET'])
+def swim():
+    return render_template('walk.html')
+
+
+@app.route('/garden', methods=['GET'])
+def garden():
+    return render_template('garden.html')
+
+
+@app.route('/mother', methods=['GET'])
+def mother():
+    return render_template('mother.html')
+
+
+@app.route('/paddle', methods=['GET'])
+def paddle():
+    return render_template('paddle.html')
 
 # @app.route('/subscribe',methods=['GET', 'POST'])
 # def subscribe():
