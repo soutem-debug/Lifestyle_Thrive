@@ -45,21 +45,9 @@ def projects():
     return render_template('projects.html')
 
 
-@app.route('/post', methods=['GET'])
-def post():
-    return render_template('blog_post2.html')
-
-
-# @app.route('/subscribe',methods=['GET', 'POST'])
-# def subscribe():
-#     if request.method == 'POST':
-#         new_signup = Users(user_name=request.form['firstName'], user_email=request.form['email'],
-#                        user_pw=generate_password_hash(request.form['password1']))
-#         session.add(new_signup)
-#         session.commit()
-#         return render_template("subscribe.html")
-#     else:
-#         return render_template("subscribe.html")
+#@app.route('/post', methods=['GET'])
+#def post():
+#    return render_template('blog_post2.html')
 
 
 @app.route('/subscribe', methods=['GET', 'POST'])
@@ -97,10 +85,10 @@ def login():
             for pw in pwdata:
                 if check_password_hash(pw, password):
                     flash('Logged in successfully!', category='success')
-                    user = login_user(remember=True)
-                return render_template("index.html")
-            else:
-                flash('Incorrect password, try again.', category='error')
+                    #user = login_user(remember=True)
+                    return render_template("index.html")
+                else:
+                    flash('Incorrect password, try again.', category='error')
         else:
             flash('Email does not exist.', category='error')
 
@@ -117,45 +105,28 @@ def logout():
 
 @app.route('/add_blog', methods=['GET', 'POST'])
 def newBlog():
-    if request.method == 'POST':
-        new_blog = BlogPosts(post_title=request.form['title'], post_content=request.form['page-content'],
-                             post_date=today)
-        session.add(new_blog)
-        session.commit()
-        flash('You have submitted a new blog!', category='success')
-        return render_template('index.html')
-    else:
-        return render_template('add_blog.html')
+        if request.method == 'POST':
+            new_blog = BlogPosts(post_title=request.form['title'], post_content=request.form['page-content'],
+                                 post_date=today)
+            session.add(new_blog)
+            session.commit()
+            flash('You have submitted a new blog!', category='success')
+            return render_template('index.html')
+        else:
+            return render_template('add_blog.html')
 
-        # @login_required
-        # def newpost():
-        #         form = BlogPost()
-        #         if request.method == 'POST':
-        #             newpost = request.form.get('blog_post')
-        #             # if len(newpost) < 1:
-        #             #     flash('Blog post is too short!', category='error')
-        #             #     return render_template('add_blog.html')
-        #             if form.validate_on_submit():
-        #                 title = form.title.data
-        #                 content = form.content.data
-        #                 new_blog = BlogPosts(post_title=title, post_content=content, post_date=today)
-        #                 session.add(new_blog)
-        #                 session.commit()
-        #                 flash("Blog post added")
-        #             return render_template('index.html')
 
-        return render_template("add_blog.html", form=form, user=current_user)
-    # form = BlogPost()
-    #
-    # if form.validate_on_submit():
-    #     title = form.title.data
-    #     content = form.content.data
-    #     new_blog = BlogPosts(post_title=title, post_content=content, post_date=today)
-    #     session.add(new_blog)
-    #     session.commit()
-    #     flash("Blog post added")
-    #     return render_template('index.html')
-    # return render_template('add_blog.html', form=form)
+@app.route('/blog/<int:post_id>')
+def post(post_id):
+    post_content = engine.execute(f"SELECT post_content FROM blog_posts WHERE post_id = '{post_id}';").first()
+    post_title = engine.execute(f"SELECT post_title FROM blog_posts WHERE post_id = '{post_id}';").first()
+    return render_template('blog.html', blog_title=post_title[0], blog_content=post_content[0])
+
+
+@app.route('/blog_index')
+def blog_index():
+    blogs = session.query(BlogPosts).all()
+    return render_template('blog_index.html', blogs=blogs)
 
 
 @app.route('/contact')
