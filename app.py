@@ -177,20 +177,20 @@ def newBlog():
     # return render_template('add_blog.html', form=form)
 
 
-@app.route('/comment/<int:post_id>', methods=['POST', 'GET'])
-def comment(post_id):
-    comments = Comment.query.filter_by(post_id).all()
+@app.route('/comment/<int:post_id>', methods=['GET', 'POST'])
+def comment():
     if request.method == 'POST':
-        name = request.form.get('name')
-        message = request.form.get('message')
-        form = request.form.get('form')
-        comments = Comment(name=name, message=message)
-        session.add(comment)
-        # message.comments += 1
-        flash('your comment has been submitted')
+        new_comment = Comment(content_author=request.form['name'], comment_content=request.form['message'])
+        session.add(new_comment)
         session.commit()
-        return render_template('swim.html', comments=comments, form=form)
-    return( render_template('swim.html', comments=comments, form=form)
+        flash("Comment posted")
+        return render_template('blog_post2.html')
+    # return render_template('add_blog.html', form=form)
+
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 
 if __name__ == "__main__":

@@ -21,7 +21,9 @@ class BlogPosts(Base):
     post_likes_count = Column(Integer, nullable=True)
     post_comment_count = Column(Integer, nullable=True)
 
+
 engine = create_engine("mysql+mysqlconnector://admin2:@GitPa$$w0rd#@54.74.234.11/thefantasticfour?charset=utf8mb4")
+
 
 Base.metadata.create_all(engine)
 
@@ -29,16 +31,11 @@ Base.metadata.create_all(engine)
 class Comment(Base):
     __tablename__ = 'comments'
     comment_id = Column(Integer, primary_key=True)
-    comment_author = Column(VARCHAR(50), unique=False, nullable=False)
-    comment_content = Column(VARCHAR(200), nullable=False)
-    # comments = Column(Integer, default=0)
-    # views = Column(Integer, default=0)
-    # # post_id = Column(Integer, ForeignKey('post.id', ondelete='CASCADE'), nullable=False)
-    # # post = 'relationship'('Post', backref=backref('posts', lazy=True, passive_deletes=True))
-    # feature = Column(Boolean, default=False, nullable=False)
-    comment_date = Column(DATETIME, nullable=False, default=DATETIME)
+    comment_date = Column(DATETIME, nullable=False)
+    comment_author = Column(VARCHAR(100), nullable=False)
+    comment_content = Column(VARCHAR(100), nullable=False)
 
     def __repr__(self):
-        return '<Post %r' % self.name
+        return '<Comment %r>' % self.username
 
 
