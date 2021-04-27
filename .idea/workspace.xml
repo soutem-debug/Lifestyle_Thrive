@@ -19,15 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5ce87cc-2e5c-46f5-9b60-abae125ee73f" name="Default Changelist" comment="flash and db connection fixed">
-      <change afterPath="$PROJECT_DIR$/templates/blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/blog_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/updated_html.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/updated_html.iml" afterDir="false" />
+    <list default="true" id="f5ce87cc-2e5c-46f5-9b60-abae125ee73f" name="Default Changelist" comment="blog post to web page and index created">
+      <change afterPath="$PROJECT_DIR$/templates/deleteblog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/editBlog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619089413303</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="blog post to web page and index created">
+      <created>1619467396788</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1619467396788</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -278,32 +281,38 @@
     <MESSAGE value="merge" />
     <MESSAGE value="Updated static files js, css, images" />
     <MESSAGE value="new working app" />
-    <option name="LAST_COMMIT_MESSAGE" value="new working app" />
+    <MESSAGE value="blog post to web page and index created" />
+    <option name="LAST_COMMIT_MESSAGE" value="blog post to web page and index created" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619310885873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619310885873" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1619453043442">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1619539953336">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619453043442" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1619464982728">
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1619539953336" />
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1619553734712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619464982728" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1619464982728">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619553734712" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1619553734712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619464982728" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1619464982728">
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619553734712" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1619553734712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619464982728" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1619464982728">
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619553734712" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1619553734712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619464982728" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619553734712" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1619467440042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619467440042" />
   </component>
 </project>

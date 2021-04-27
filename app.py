@@ -116,6 +116,28 @@ def newBlog():
             return render_template('add_blog.html')
 
 
+@app.route( "/blog/<int:post_id>/edit/", methods=['GET', 'POST'] )
+def editBlog(post_id):
+    editedBlog = session.query( BlogPosts ).filter_by( post_id=post_id ).one()
+    if request.method == 'POST':
+        if request.form['name']:
+            editedBlog.title = request.form['name']
+            return redirect( url_for( 'Blogposts' ) )
+    else:
+        return render_template( 'editBlog.html', blog=editedBlog )
+
+
+@app.route( '/blog/<int:post_id>/delete/', methods=['GET', 'POST'] )
+def deleteBlog(post_id):
+    blog_to_delete = session.query( BlogPosts ).filter_by( post_id=post_id ).one()
+    if request.method == 'POST':
+        session.delete( blog_to_delete )
+        session.commit()
+        return redirect( url_for( 'BlogPosts', blog=post_id ) )
+    else:
+        return render_template( 'deleteblog.html', blog=blog_to_delete )
+
+
 @app.route('/blog/<int:post_id>')
 def post(post_id):
     post_content = engine.execute(f"SELECT post_content FROM blog_posts WHERE post_id = '{post_id}';").first()
@@ -127,6 +149,7 @@ def post(post_id):
 def blog_index():
     blogs = session.query(BlogPosts).all()
     return render_template('blog_index.html', blogs=blogs)
+
 
 
 @app.route('/contact')
