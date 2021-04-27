@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block header %}<h2 class="section-heading">{% block title %}Gardening{% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+
+<div id="post-container">
+    <section id="blogpost">
+        <div class="card">
+            <div class="card-meta-blogpost">
+                Posted by Emma on 11/04/2021
+                <a href="#">Past Times</a>
+            </div>
+            <div class="card-image">
+                <img src="static/assets/gardening.jpg" alt="Gardening">
+            </div>
+            <div class="card-description">
+                <h3>Em</h3>
+                <p>Spending time outdoors is great for our minds and body so it is no surprise that
+                  gardening is the perfect pass-time to lift your spirits. When I was a child my
+                  Grandad taught me how to garden, although looking back I was probably more of a
+                  hindrance then help! Since I have grown up I now understand more what drew him to his garden.</p>
+                <p>As well as keeping you actively fit the greatest benefit for me has  been developing a
+                  growth mindset. With a growth mindset, I am aware that I am constantly learning.
+                  When something doesn't work or the end product is not planned I would previously of
+                  viewed that as a failure. After much trial and error between my garden and allotment
+                  I now view it as an opportunity to learn, which is a thought process I apply to all
+                  areas of my life.</p>
+                <p>Don’t have access to a garden?</p>
+
+                <p>Build a Terranium</p>
+                <p>Terraniums are miniature landscapes in a glass vessel, they let you exercise your
+                  creativity, and planting one is a great activity to do at home, especially with
+                  your kids.</p>
+
+                <p>Grown chillies </p>
+                <p>Chillies are a great way to liven up meal times and they are super easy to grow
+                  as long as you have a bright and sunny windowsill. You can grow chillies from seed,
+                  sowing in January-March, or you can buy established plants online.  </p>
+
+                <p>Grow herbs</p>
+                <p>Fresh herbs add depth and flavour to your dishes, and are easy and cheap to grow.
+                  Annual herbs such as basil, coriander and parsley are easy to grow from seed,
+                  thriving in a bright, sheltered spot such as a windowsill or window box.  </p>
+            </div>
+        </div>
+    </section>
+        <!-----------------------Comments section----------------------------------------------------->
+
+        <div id="comments-form">
+            <h5>Post A Comment</h5>
+            <form method="POST">
+                <div class="form-group form-inline">
+                    <div class="form-group-name">
+                        <input type="text" name="name" class="form-control"
+                               id="name" placeholder="Enter Name: "
+                               onfocus="this.placeholder = ''"
+                               onblur="this.placeholder = 'Enter Name'">
+                    </div>
+                    <div class="form-group-email">
+                        <input type="email" name="email" class="form-control"
+                               id="email" placeholder="Enter email address"
+                               onfocus="this.placeholder = ''"
+                               onblur="this.placeholder = 'Enter email address: '">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form control mb-10" rows="5" name=message"
+                                  placeholder="Message" onfocus="this.placeholder = ''"
+                                  onblur="this.placeholder='Message'" required =""></textarea>
+                    </div>
+                    <button type="submit" class="primary-btn text-uppercase">Post</button>
+
+                    </button>
+
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+
+    <!--------------------------xxx------------------Comments Section-----------xxxx---------------->
+<div class="icon-bar">
+  <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="https://www.twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.google.co.uk/" class="google"><i class="fa fa-google"></i></a>
+  <a href="https://gb.linkedin.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#https://www.youtube.com/" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+
+{% endblock %}
+</div>
