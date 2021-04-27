@@ -1,5 +1,5 @@
 
-from sqlalchemy import Column, Integer, VARCHAR, create_engine, DATETIME
+from sqlalchemy import Column, Integer, VARCHAR, create_engine, DATETIME, Boolean, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
@@ -26,17 +26,19 @@ engine = create_engine("mysql+mysqlconnector://admin2:@GitPa$$w0rd#@54.74.234.11
 Base.metadata.create_all(engine)
 
 
-# class Comment(Base):
-#     __tablename__ = 'comments'
-#     id = Column(Integer, primary_key=True)
-#     name = Column(VARCHAR(50), unique=False, nullable=False)
-#     email = Column(VARCHAR(120), unique=False, nullable=False)
-#     post_id = Column(Integer, ForeignKey('post.id'), nullable=False)
-#     post = Column(VARCHAR(100), nullable=False)
-#     pub_date = Column(DATETIME, nullable=False, default=DATETIME.utcnow)
-#     status = Column(Boolean, default=False)
-#
-#     def __repr__(self):
-#         return '<Comment %r>' % self.username
+class Comment(Base):
+    __tablename__ = 'comments'
+    comment_id = Column(Integer, primary_key=True)
+    comment_author = Column(VARCHAR(50), unique=False, nullable=False)
+    comment_content = Column(VARCHAR(200), nullable=False)
+    # comments = Column(Integer, default=0)
+    # views = Column(Integer, default=0)
+    # # post_id = Column(Integer, ForeignKey('post.id', ondelete='CASCADE'), nullable=False)
+    # # post = 'relationship'('Post', backref=backref('posts', lazy=True, passive_deletes=True))
+    # feature = Column(Boolean, default=False, nullable=False)
+    comment_date = Column(DATETIME, nullable=False, default=DATETIME)
+
+    def __repr__(self):
+        return '<Post %r' % self.name
 
 

@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 from sqlalchemy import create_engine, orm
 from forms import LoginForm, RegistrationForm, BlogPost
 import initial
-from dbsetup import Base, Users, BlogPosts
+from dbsetup import Base, Users, BlogPosts, Comment
 from werkzeug.security import generate_password_hash, check_password_hash
 import datetime
 from flask_login import LoginManager
@@ -39,19 +39,19 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/blogs')
-@app.route('/projects')
-def projects():
-    return render_template('projects.html')
+# @app.route('/blogs')
+# @app.route('/projects')
+# def projects():
+#     return render_template('projects.html')
 
 
-@app.route('/post', methods=['GET'])
-def post():
+@app.route('/swim', methods=['GET', 'POST'])
+def swim():
     return render_template('swim.html')
 
 
 @app.route('/walk', methods=['GET'])
-def swim():
+def walk():
     return render_template('walk.html')
 
 
@@ -177,9 +177,20 @@ def newBlog():
     # return render_template('add_blog.html', form=form)
 
 
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
+@app.route('/comment/<int:post_id>', methods=['POST', 'GET'])
+def comment(post_id):
+    comments = Comment.query.filter_by(post_id).all()
+    if request.method == 'POST':
+        name = request.form.get('name')
+        message = request.form.get('message')
+        form = request.form.get('form')
+        comments = Comment(name=name, message=message)
+        session.add(comment)
+        # message.comments += 1
+        flash('your comment has been submitted')
+        session.commit()
+        return render_template('swim.html', comments=comments, form=form)
+    return( render_template('swim.html', comments=comments, form=form)
 
 
 if __name__ == "__main__":
