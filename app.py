@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 from sqlalchemy import create_engine, orm
 from forms import LoginForm, RegistrationForm, BlogPost
 import initial
-from dbsetup import Base, Users, BlogPosts
+from dbsetup import Base, Users, BlogPosts, Comment
 from werkzeug.security import generate_password_hash, check_password_hash
 import datetime
 from flask_login import LoginManager
@@ -127,6 +127,17 @@ def post(post_id):
 def blog_index():
     blogs = session.query(BlogPosts).all()
     return render_template('blog_index.html', blogs=blogs)
+
+
+@app.route('/comment/<int:post_id>')
+def comment():
+    if request.method == 'POST':
+        new_comment = Comment(content_author=request.form['name'], comment_content=request.form['message'])
+        session.add(new_comment)
+        session.commit()
+        flash("Comment posted")
+        return render_template('blog_post2.html')
+    # return render_template('add_blog.html', form=form)
 
 
 @app.route('/contact')
