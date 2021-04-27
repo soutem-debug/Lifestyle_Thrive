@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block header %}<h2 class="section-heading">{% block title %}Love Languages? Lets Talk...{% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+
+<div id="post-container">
+    <section id="blogpost">
+        <div class="card">
+            <div class="card-meta-blogpost">
+                Posted by Saf on 18/04/2021
+                <a href="#">Relationships</a>
+            </div>
+            <div class="card-image">
+                <img src="static/assets/love_1.jpg" alt="love">
+            </div>
+            <div class="card-description">
+                <h3>The Introduction</h3>
+                <p>The five most discussed love languages include:</p>
+                <ul>
+                    <li>Words of Affirmation</li>
+                    <li>Quality Time</li>
+                    <li>Receiving Gifts</li>
+                    <li>Acts Of Service</li>
+                    <li>Physical Touch</li>
+
+                </ul>
+                <p>Knowing each other’s love languages can be helpful for any relationship
+                    — significant others, siblings, parents, children, friends, colleagues.
+                    And the fascinating thing is that two people in a relationship may have
+                    different love languages — so, what makes you feel loved might not be the
+                    same thing that makes your partner feel loved. You may express affection to
+                    your significant other regularly, but do you truly take the time to make sure
+                    you're communicating it the way your partner wants to receive it? Even love can
+                    sometimes get lost in translation when two partners speak different love languages.</p>
+
+                <p>Love languages are a useful tool to improve how we communicate and express ourselves
+                    to each other, but they shouldn't be the be-all-and-end-all solution for happiness.
+                    Instead, it should function as a starting point that sets couples on a journey to meet
+                    each other in a more profound way and self-regulate better. But the work shouldn't stop
+                    there. </p>
+            </div>
+        </div>
+    </section>
+        <!-----------------------Comments section----------------------------------------------------->
+
+        <div id="comments-form">
+            <h5>Post A Comment</h5>
+            <form method="POST">
+                <div class="form-group form-inline">
+                    <div class="form-group-name">
+                        <input type="text" name="name" class="form-control"
+                               id="name" placeholder="Enter Name: "
+                               onfocus="this.placeholder = ''"
+                               onblur="this.placeholder = 'Enter Name'">
+                    </div>
+                    <div class="form-group-email">
+                        <input type="email" name="email" class="form-control"
+                               id="email" placeholder="Enter email address"
+                               onfocus="this.placeholder = ''"
+                               onblur="this.placeholder = 'Enter email address: '">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form control mb-10" rows="5" name=message"
+                                  placeholder="Message" onfocus="this.placeholder = ''"
+                                  onblur="this.placeholder='Message'" required =""></textarea>
+                    </div>
+                    <button type="submit" class="primary-btn text-uppercase">Post</button>
+
+                    </button>
+
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+
+    <!--------------------------xxx------------------Comments Section-----------xxxx---------------->
+<div class="icon-bar">
+  <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="https://www.twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.google.co.uk/" class="google"><i class="fa fa-google"></i></a>
+  <a href="https://gb.linkedin.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#https://www.youtube.com/" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+
+{% endblock %}
+</div>

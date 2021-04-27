@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block header %}<h2 class="section-heading">{% block title %}Let's Bake!{% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+
+<div id="post-container">
+    <section id="blogpost">
+        <div class="card">
+            <div class="card-meta-blogpost">
+                Posted by Sonia on 15/04/2021
+                <a href="#">Baking</a>
+            </div>
+            <div class="card-image">
+                <img src="static/assets/baking_1.jpg" alt="baking">
+            </div>
+            <div class="card-description">
+                <h3>The Introduction</h3>
+                <p>Diced Cinnamon Donut Cake. This is one of my faves! The recipe calls for spelt flour but you can use all-purpose
+                    flour, whole wheat, spelt or a combination of all three. (The spelt adds a lovely warmth
+                    that all-purpose can’t, and whole wheat can be a little full on by itself.) The cake is
+                    not overly spiced and keeps for days; in fact, I think it’s better on the second day when
+                    the flavors have had time to rest. It is deserving of a pair of slippers, a cardigan and
+                    a cup of tea. Makes one 13-by-9-inch rectangular cake; Preparation: 20 minutes</p>
+
+                <p>The Cake</p>
+                <ul>
+                    <li>2 1⁄4 cups (270g) organic whole-grain spelt flour (or all-purpose flour; see note above)</li>
+                    <li>1 cup (190g) light brown sugar, lightly packed</li>
+                    <li>1 1⁄2 teaspoons baking powder</li>
+                    <li>1⁄2 teaspoon baking soda</li>
+                    <li>1⁄2 teaspoon salt</li>
+                    <li>1 teaspoon ground cinnamon</li>
+                    <li>1⁄2 teaspoon ground nutmeg</li>
+                    <li>3 eggs, at room temperature</li>
+                    <li>1⁄2 cup (120ml) mild-flavored extra-virgin olive oil </li>
+                    <li>1 teaspoon vanilla extract</li>
+                    <li>1 cup (240g) unsweetened applesauce</li>
+                    <li>1⁄4 cup (85g) honey</li>
+                    <li>1⁄2 cup (120ml) whole milk</li>
+                    <li>1 tablespoon finely grated orange zest</li>
+                    <li>1 cup (190g) light brown sugar, lightly packed </li>
+                </ul>
+
+
+                <p>Preheat the oven to 350°F. Grease a 13 by 9-inch rectangular pan with butter,
+                    line the bottom and sides of the pan with parchment paper, and grease the paper.
+                    (I’ll let you just grease, line the bottom of the pan, and lightly flour the sides
+                    if you’re feeling lazy.) Place a large sifter or a sieve in a large mixing bowl.
+                    Add the flour, baking powder, baking soda, salt, cinnamon and nutmeg and sift. In another
+                    large bowl, whisk the eggs, oil, vanilla, applesauce, honey, milk, zest and brown sugar until
+                    smooth. Gradually add the wet ingredients to the dry ingredients and whisk until there are no
+                    lumps and the batter is smooth. Pour the batter into the prepared pan and smooth the top. Bake
+                    in the center of the oven for 28 to 30 minutes or until a wooden skewer inserted in the center
+                    comes out clean, and the cake bounces back when lightly pressed. Remove the cake from the oven
+                    and let it stand for 10 minutes. Run a butter knife around the cake to gently release. Invert the
+                    cake, peel off the parchment paper, and cool on a wire rack.</p>
+            </div>
+        </div>
+    </section>
+        <!-----------------------Comments section----------------------------------------------------->
+
+        <div id="comments-form">
+            <h5>Post A Comment</h5>
+            <form method="POST">
+                <div class="form-group form-inline">
+                    <div class="form-group-name">
+                        <input type="text" name="name" class="form-control"
+                               id="name" placeholder="Enter Name: "
+                               onfocus="this.placeholder = ''"
+                               onblur="this.placeholder = 'Enter Name'">
+                    </div>
+                    <div class="form-group-email">
+                        <input type="email" name="email" class="form-control"
+                               id="email" placeholder="Enter email address"
+                               onfocus="this.placeholder = ''"
+                               onblur="this.placeholder = 'Enter email address: '">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form control mb-10" rows="5" name=message"
+                                  placeholder="Message" onfocus="this.placeholder = ''"
+                                  onblur="this.placeholder='Message'" required =""></textarea>
+                    </div>
+                    <button type="submit" class="primary-btn text-uppercase">Post</button>
+
+                    </button>
+
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+
+    <!--------------------------xxx------------------Comments Section-----------xxxx---------------->
+<div class="icon-bar">
+  <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="https://www.twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.google.co.uk/" class="google"><i class="fa fa-google"></i></a>
+  <a href="https://gb.linkedin.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#https://www.youtube.com/" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+
+{% endblock %}
+</div>
