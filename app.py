@@ -64,6 +64,20 @@ def garden():
 def mother():
     return render_template('mother.html')
 
+@app.route('/love', methods=['GET'])
+def love():
+    return render_template('love.html')
+
+
+@app.route('/baking', methods=['GET'])
+def baking():
+    return render_template('Baking.html')
+
+
+@app.route('/Mindfulness', methods=['GET'])
+def mindfulness():
+    return render_template('Mindfulness.html')
+
 
 @app.route('/paddle', methods=['GET'])
 def paddle():

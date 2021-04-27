@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block header %}<h2 class="section-heading">{% block title %}Mindfulness{% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+
+<div id="post-container">
+    <section id="blogpost">
+        <div class="card">
+            <div class="card-meta-blogpost">
+                Posted by Saf on 22/04/2021
+                <a href="#">Mindfulness</a>
+            </div>
+            <div class="card-image">
+                <img src="static/assets/mindfulness_3.jpg" alt="Mind">
+            </div>
+            <div class="card-description">
+                <h3>The Introduction</h3>
+                <p>Mindfulness. It’s a pretty straightforward word. It suggests that the mind is fully
+                    attending to what’s happening, to what you’re doing, to the space you’re moving
+                    through. That might seem trivial, except for the annoying fact that we so often
+                    veer from the matter at hand. Our mind takes flight, we lose touch with our body,
+                    and pretty soon we’re engrossed in obsessive thoughts about something that just
+                    happened or fretting about the future. And that makes us anxious.</p>
+
+                <p>Mindfulness is the basic human ability to be fully present, aware of where we are
+                    and what we’re doing, and not overly reactive or overwhelmed by what’s going on around us.
+                    Mindfulness is a quality that every human being already possesses, it’s not something you
+                    have to conjure up, you just have to learn how to access it.
+                    If you want to know what mindfulness is, it’s best to try it for a while. Since it’s hard
+                    to nail down in words, you will find slight variations in the meaning in books, websites, audio,
+                    and video.</p>
+                <p>How to practice it:</p>
+                <ul>
+                    <li>Seated, walking, standing, and moving meditation (it’s also possible lying down but often leads
+                    to sleep).</li>
+                    <li>Short pauses we insert into everyday life.</li>
+                    <li>Merging meditation practice with other activities, such as yoga or sports.</li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+        <!-----------------------Comments section----------------------------------------------------->
+
+        <div id="comments-form">
+            <h5>Post A Comment</h5>
+            <form method="POST">
+                <div class="form-group form-inline">
+                    <div class="form-group-name">
+                        <input type="text" name="name" class="form-control"
+                               id="name" placeholder="Enter Name: "
+                               onfocus="this.placeholder = ''"
+                               onblur="this.placeholder = 'Enter Name'">
+                    </div>
+                    <div class="form-group-email">
+                        <input type="email" name="email" class="form-control"
+                               id="email" placeholder="Enter email address"
+                               onfocus="this.placeholder = ''"
+                               onblur="this.placeholder = 'Enter email address: '">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form control mb-10" rows="5" name=message"
+                                  placeholder="Message" onfocus="this.placeholder = ''"
+                                  onblur="this.placeholder='Message'" required =""></textarea>
+                    </div>
+                    <button type="submit" class="primary-btn text-uppercase">Post</button>
+
+                    </button>
+
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+
+    <!--------------------------xxx------------------Comments Section-----------xxxx---------------->
+<div class="icon-bar">
+  <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="https://www.twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.google.co.uk/" class="google"><i class="fa fa-google"></i></a>
+  <a href="https://gb.linkedin.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#https://www.youtube.com/" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+
+{% endblock %}
+</div>
