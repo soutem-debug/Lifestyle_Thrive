@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 from sqlalchemy import create_engine, orm
-from forms import LoginForm, RegistrationForm, BlogPost
+from forms import LoginForm, RegistrationForm, BlogPost, AddCommentForm
 import initial
 from dbsetup import Base, Users, BlogPosts, Comment
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -191,15 +191,21 @@ def newBlog():
     # return render_template('add_blog.html', form=form)
 
 
-@app.route('/comment/<int:post_id>', methods=['GET', 'POST'])
-def comment():
-    if request.method == 'POST':
-        new_comment = Comment(content_author=request.form['name'], comment_content=request.form['message'])
-        session.add(new_comment)
-        session.commit()
-        flash("Comment posted")
-        return render_template('blog_post2.html')
-    # return render_template('add_blog.html', form=form)
+# @app.route('/comment', methods=['GET', 'POST'])
+# def comment():
+#     comment = Comment.query.filter_by(comment_id=comment.id).filter_by(feature=True).all()
+#     session.commit()
+#     if request.method == "POST":
+#         name = request.form.get('name')
+#         message = request.form.get('message')
+#         comment = Comment(name=name, message=message)
+#         session.add(comment)
+#         # post.comments = post.comments + 1
+#         session.commit()
+#         flash('Your comment has been submited')
+#         return redirect(request.url)
+#
+#     return render_template('comment.html', comment=comment)
 
 
 @app.route('/contact')

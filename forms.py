@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, TextAreaField
+from wtforms import StringField, PasswordField, TextAreaField, SubmitField
 from wtforms.validators import InputRequired
 
 
@@ -16,5 +16,10 @@ class RegistrationForm(FlaskForm):
 class BlogPost(FlaskForm):
     title = StringField('title', validators=[InputRequired()])
     content = TextAreaField('password', validators=[InputRequired()],)
+
+
+class AddCommentForm(FlaskForm):
+    comment_content = StringField('comment_content', validators=[InputRequired()])
+    submit = SubmitField("Posted")
 
 

@@ -1,15 +1,18 @@
 
-from sqlalchemy import Column, Integer, VARCHAR, create_engine, DATETIME, Boolean, ForeignKey
+from sqlalchemy import Column, Integer, VARCHAR, create_engine, DATETIME, ForeignKey, TIMESTAMP
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship, backref
 
 Base = declarative_base()
+
 
 class Users(Base):
     __tablename__ = 'users'
     user_id = Column(Integer, primary_key=True, nullable=False)
     user_name = Column(VARCHAR(100), nullable=False)
-    user_email = Column(VARCHAR(100),unique=True ,nullable=False)
+    user_email = Column(VARCHAR(100),unique=True,nullable=False)
     user_pw = Column(VARCHAR(100), nullable=False)
+
 
 
 class BlogPosts(Base):
@@ -22,6 +25,8 @@ class BlogPosts(Base):
     post_comment_count = Column(Integer, nullable=True)
 
 
+
+
 engine = create_engine("mysql+mysqlconnector://admin2:@GitPa$$w0rd#@54.74.234.11/thefantasticfour?charset=utf8mb4")
 
 
@@ -30,12 +35,26 @@ Base.metadata.create_all(engine)
 
 class Comment(Base):
     __tablename__ = 'comments'
-    comment_id = Column(Integer, primary_key=True)
-    comment_date = Column(DATETIME, nullable=False)
-    comment_author = Column(VARCHAR(100), nullable=False)
+    comment_id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
+    comment_date = Column(TIMESTAMP)
     comment_content = Column(VARCHAR(100), nullable=False)
+    comment_like_count = Column(Integer, nullable=True)
+
 
     def __repr__(self):
-        return '<Comment %r>' % self.username
+        return f'<Comment %r>' % self.username % self.timestamp
+
+
+class Reply(Base):
+    __tablename__ = 'reply'
+    reply_id = Column(Integer, primary_key=True, autoincrement=True)
+    comment_id = Column(Integer, ForeignKey('comment_id'))
+    post_id = Column(Integer, ForeignKey('post_id'))
+    reply_content = Column(VARCHAR(100), nullable=False)
+    created_at = Column(TIMESTAMP)
+
+    def add_reply(self, text):
+        return Comment(text=text, parent=self)
+
 
 
