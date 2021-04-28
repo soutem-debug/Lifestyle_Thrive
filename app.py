@@ -45,9 +45,60 @@ def projects():
     return render_template('projects.html')
 
 
+<<<<<<< HEAD
 #@app.route('/post', methods=['GET'])
 #def post():
 #    return render_template('blog_post2.html')
+=======
+@app.route('/post', methods=['GET'])
+def post():
+    return render_template('swim.html')
+
+
+@app.route('/walk', methods=['GET'])
+def swim():
+    return render_template('walk.html')
+
+
+@app.route('/garden', methods=['GET'])
+def garden():
+    return render_template('garden.html')
+
+
+@app.route('/mother', methods=['GET'])
+def mother():
+    return render_template('mother.html')
+
+@app.route('/love', methods=['GET'])
+def love():
+    return render_template('love.html')
+
+
+@app.route('/baking', methods=['GET'])
+def baking():
+    return render_template('Baking.html')
+
+
+@app.route('/Mindfulness', methods=['GET'])
+def mindfulness():
+    return render_template('Mindfulness.html')
+
+
+@app.route('/paddle', methods=['GET'])
+def paddle():
+    return render_template('paddle.html')
+
+# @app.route('/subscribe',methods=['GET', 'POST'])
+# def subscribe():
+#     if request.method == 'POST':
+#         new_signup = Users(user_name=request.form['firstName'], user_email=request.form['email'],
+#                        user_pw=generate_password_hash(request.form['password1']))
+#         session.add(new_signup)
+#         session.commit()
+#         return render_template("subscribe.html")
+#     else:
+#         return render_template("subscribe.html")
+>>>>>>> e+s
 
 
 @app.route('/subscribe', methods=['GET', 'POST'])

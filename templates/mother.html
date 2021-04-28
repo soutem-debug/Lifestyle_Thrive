@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block header %}<h2 class="section-heading">{% block title %}Motherhood during a pandemic% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+
+<div id="post-container">
+    <section id="blogpost">
+        <div class="card">
+            <div class="card-meta-blogpost">
+                Posted by Raj on 16/04/2021
+                <a href="#">Wellness</a>
+            </div>
+            <div class="card-image">
+                <img src="static/assets/baby.jpg" alt="Motherhood">
+            </div>
+            <div class="card-description">
+                <h3>The Introduction</h3>
+                <p>They say it takes a village, and mums went without their village in one of their most
+                    testing times in their life.  Everybody forgets that when a baby is born, a
+                    mother is born too, and she too needs that same love, nourishment and rich environment
+                    in order to thrive.</p>
+                <p>So after a year of the outside world being on pause, where you could actually get to
+                    really focus on every little detail (the good and the bad!) of your baby (and you!),
+                    you most certainly have learnt the things that you value most. These are the things
+                    to carry through as the world opens up again. The vibes that you want entering your
+                    precious circle, the places you go which have value, and the things that you do which
+                    have meaning. </p>
+                <p>Bloggers top tips:</p>
+        </div>
+        </div>
+    </section>
+        <!-----------------------Comments section----------------------------------------------------->
+
+        <div id="comments-form">
+            <h5>Post A Comment</h5>
+            <form method="POST">
+                <div class="form-group form-inline">
+                    <div class="form-group-name">
+                        <input type="text" name="name" class="form-control"
+                               id="name" placeholder="Enter Name: "
+                               onfocus="this.placeholder = ''"
+                               onblur="this.placeholder = 'Enter Name'">
+                    </div>
+                    <div class="form-group-email">
+                        <input type="email" name="email" class="form-control"
+                               id="email" placeholder="Enter email address"
+                               onfocus="this.placeholder = ''"
+                               onblur="this.placeholder = 'Enter email address: '">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form control mb-10" rows="5" name=message"
+                                  placeholder="Message" onfocus="this.placeholder = ''"
+                                  onblur="this.placeholder='Message'" required =""></textarea>
+                    </div>
+                    <button type="submit" class="primary-btn text-uppercase">Post</button>
+
+                    </button>
+
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+
+    <!--------------------------xxx------------------Comments Section-----------xxxx---------------->
+<div class="icon-bar">
+  <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="https://www.twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.google.co.uk/" class="google"><i class="fa fa-google"></i></a>
+  <a href="https://gb.linkedin.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#https://www.youtube.com/" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+</div>
+{% endblock %}
