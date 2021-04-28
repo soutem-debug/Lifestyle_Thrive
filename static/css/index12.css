@@ -103,7 +103,7 @@ textarea:focus {
 
 nav {
   height: 72px;
-  background: rgba(211,211,211);
+  background: rgba(80,27,29);
   width: 100%;
   margin: 0;
   position: fixed;
@@ -118,7 +118,7 @@ nav {
 
 nav a {
   padding: 0 52px;
-  color: rgba(255,105,180);
+  color: white;
   transition: 0.4s;
 }
 
@@ -138,7 +138,7 @@ nav ul {
 
 /*-----------------------------------pink home------------------------------------------*/
 .active {
-  color: #f783ae;
+  color: rgba(218,144,147);
 }
 
 /*------------------------------------------------------------------------------------------*/
@@ -304,19 +304,19 @@ section {
 /* Footer */
 
 footer {
-  background: rgba(211,211,211);
+  background: rgba(139,47,50) ;
   padding: 8px;
   color: #eee;
   display: flex;
 }
 
 footer a {
-  color: rgba(255,105,180);
+  color: white;
 }
 
 footer #left-footer {
   flex: 1;
-  border-right: 1px solid red;
+  border-right: 1px solid white;
   padding-left: 32px;
 }
 
