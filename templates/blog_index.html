@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block header %}<h2 class="section-heading">{% block title %}Wild Swimming in Yorkshire!{% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+{% for blog in blogs %}
+<li><a href="/blog/{{blog.post_id}}">{{blog.post_title}}</a></li>
+{% endfor %}
+
+
+</body>
+</html>
