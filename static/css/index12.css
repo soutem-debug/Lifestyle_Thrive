@@ -103,7 +103,7 @@ textarea:focus {
 
 nav {
   height: 72px;
-  background: rgba(80,27,29);
+  background: rgb(255,99,71);
   width: 100%;
   margin: 0;
   position: fixed;
@@ -124,7 +124,7 @@ nav a {
 
 nav a:hover {
   text-decoration: none;
-  color: gray;
+  color: #eb7d46;
 }
 
 nav ul {
@@ -138,7 +138,7 @@ nav ul {
 
 /*-----------------------------------pink home------------------------------------------*/
 .active {
-  color: rgba(218,144,147);
+  color: #eb7d46;
 }
 
 /*------------------------------------------------------------------------------------------*/
@@ -231,8 +231,7 @@ section {
 .section-heading {
   font-size: 32px;
   font-family: "poppins", sans-serif;
-  border-left: 3px solid black;
-  border-right: 3px solid black;
+
   transition: all 0.4s;
   display: inline-block;
   padding: 4px 32px;
@@ -240,7 +239,7 @@ section {
 
 .section-heading:hover {
   padding: 4px 48px;
-  background: red;
+  background: gray;
 }
 
 /* Section Source */
